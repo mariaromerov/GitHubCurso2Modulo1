@@ -8,7 +8,7 @@ describe('OctoFit data contract', () => {
   it('requires meaningful user identity and goals', async () => {
     const user = new User({});
     const error = user.validateSync();
-    expect(error?.errors.name).toBeDefined();
+    expect(error?.errors.name).toBeDefined(); 
     expect(error?.errors.email).toBeDefined();
     expect(error?.errors.fitnessGoal).toBeDefined();
   });
