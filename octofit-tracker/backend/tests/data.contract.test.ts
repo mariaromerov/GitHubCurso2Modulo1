@@ -8,7 +8,7 @@ describe('OctoFit data contract', () => {
   it('requires meaningful user identity and goals', async () => {
     const user = new User({});
     const error = user.validateSync();
-    expect(error?.errors.name).toBeDefined(); 
+    expect(error?.errors.name).toBeDefined();
     expect(error?.errors.email).toBeDefined();
     expect(error?.errors.fitnessGoal).toBeDefined();
   });
@@ -34,7 +34,7 @@ describe('OctoFit data contract', () => {
     expect(error?.errors.minutes).toBeDefined();
     expect(error?.errors.points).toBeDefined();
     expect(error?.errors.occurredAt).toBeDefined();
-  }); 
+  });
   it('defines workout suggestions with focus, duration, and difficulty', () => {
     const workout = new Workout({ title: 'Intervals' });
     const error = workout.validateSync();
